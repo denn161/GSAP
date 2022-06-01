@@ -22,7 +22,7 @@
           duration:3,
           onStart:function(){
             window.removeEventListener('wheel',activeScroll)
-            cursor.style.display='none'
+            // cursor.style.display='none'
             preolader.style.display='flex'          
             gsap.to('.preloader__forward',{
                opacity:1,
@@ -54,10 +54,18 @@
         tween.to(preolader,{
           opacity:0,
           onComplete:function(){   
-            window.addEventListener('wheel',activeScroll)         
-            cursor.style.display='block'
+            window.addEventListener('wheel',activeScroll)  
+             
+            // if(window.innerWidth<821){
+            //   cursor.style.display='none'
+            // }else{
+            //   cursor.style.display='block'
+
+            // }
+            
+          
             preolader.style.display='none'
-                
+           
 
             startAnimation()         
 
@@ -106,8 +114,11 @@
   
         }
        }
+       
 
-
+    
+          
+   
 
 
     
